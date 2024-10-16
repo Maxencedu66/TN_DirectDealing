@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="416.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Username" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="etat du compte (sommeil ou pas)" />
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="600.0">
+         <children>
+            <Label text="niveau d'expérience" />
+         </children>
+      </HBox>
+      <HBox prefHeight="45.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="46.0" prefWidth="599.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="149.0" text="descritpion de &lt;username&gt;" />
+                  <Label text="Faites connaissance avec &lt;username&gt;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="29.0" prefWidth="600.0">
+         <children>
+            <Label text="membre depuis le &lt;dateInscription&gt;" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

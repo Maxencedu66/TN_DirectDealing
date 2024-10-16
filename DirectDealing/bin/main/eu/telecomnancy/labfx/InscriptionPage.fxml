@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                <Button fx:id="ButtonValidate" layoutX="53.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleInscription" text="VALIDER" />
+                <Button fx:id="ButtonCancel" layoutX="470.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleRetour" text="ANNULER" />
+                <TextField fx:id="prenom" alignment="CENTER" layoutX="269.0" layoutY="44.0" promptText="Entrez un Prénom" />
+                <TextField fx:id="nom" alignment="CENTER" layoutX="63.0" layoutY="108.0" promptText="Entrez un Nom" />
+                    <TextField fx:id="pseudo" alignment="CENTER" layoutX="80.0" layoutY="44.0" promptText="Entrez un Pseudo" />
+                    <TextField fx:id="mail" alignment="CENTER" layoutX="397.0" layoutY="82.0" promptText="Entrez un mail" />
+                    <TextField fx:id="password" alignment="CENTER" layoutX="349.0" layoutY="134.0" promptText="Entrez un mot de passe" />
+                    <TextField fx:id="password2" alignment="CENTER" layoutX="160.0" layoutY="181.0" promptText="Confirmez votre mot de passe" />
+                <Button fx:id="ButtonImage" layoutX="243.0" layoutY="228.0" mnemonicParsing="false" onAction="#chooseImage" text="Choisir une image" />
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <ImageView fitHeight="150.0" fitWidth="358.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@images/logo_codingWeek.png" />
+         </image>
+      </ImageView>
+   </top>
+</BorderPane>

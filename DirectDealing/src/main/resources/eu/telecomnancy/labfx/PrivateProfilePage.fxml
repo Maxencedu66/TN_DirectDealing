@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="731.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.telecomnancy.labfx.PrivateProfileController">
+    <children>
+        
+        <HBox alignment="CENTER" prefHeight="70.0" prefWidth="402.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modification de votre profil" textAlignment="CENTER">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Text>
+         </children></HBox>
+        <Separator />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <VBox alignment="TOP_RIGHT" prefHeight="205.0" prefWidth="226.0" spacing="24.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pseudo:">
+                           <font>
+                              <Font name="Ubuntu" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom:">
+                           <font>
+                              <Font name="Ubuntu" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prénom:">
+                           <font>
+                              <Font name="Ubuntu" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numéro de téléphone:">
+                           <font>
+                              <Font name="Ubuntu" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ville:">
+                           <font>
+                              <Font name="Ubuntu" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="205.0" prefWidth="284.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="pseudo" alignment="CENTER" promptText="Nouveau pseudo">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="nom" alignment="CENTER" promptText="Nouveau nom">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="prenom" alignment="CENTER" promptText="Nouveau prénom">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="phone" alignment="CENTER" promptText="Nouveau numéro">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="localisation" alignment="CENTER" promptText="Nouvelle ville">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <ImageView fx:id="photoProfil" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#onPhotoProfilClicked" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+        <!-- Section Bouton Appliquer -->
+        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="402.0">
+            <Button fx:id="appliquer" mnemonicParsing="false" onAction="#handleSaveButtonAction" text="Valider les modifcations">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Button>
+        </HBox>
+        <Separator />
+        <!-- Section Passer en Sommeil -->
+        <HBox alignment="TOP_CENTER" prefHeight="30.0" prefWidth="600.0" spacing="80.0">
+         <children>
+            <RadioButton fx:id="ButtonActif" mnemonicParsing="false" onAction="#changeStateToActif" text="Mode Actif" />
+            <RadioButton fx:id="ButtonSommeil" mnemonicParsing="false" onAction="#changeStateToSommeil" text="Mode Sommeil" />
+         </children>
+        </HBox>
+      <Separator />
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+              <!-- Section Email -->
+              <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0" spacing="20.0">
+               <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse Mail:">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Text>
+                   <Label fx:id="mail" text="mail">
+                  <font>
+                     <Font size="18.0" />
+                  </font>
+               </Label>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+              </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="29.0" prefHeight="30.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date d'inscription:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="dateInscription" text="date d'inscription">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="179.0" prefHeight="30.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Florain:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="nbFlorain" text="nombre de florain">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="179.0" prefHeight="30.0" prefWidth="600.0" spacing="20.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="100.0" right="100.0" top="10.0" />
+    </padding>
+</VBox>
